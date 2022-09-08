@@ -1,25 +1,30 @@
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
 import './styles.css'
 import NotificationButton from "../NotificationButton"
+import { useState } from "react"
 
 function SalesCard() {
+
+    const [startDate, setStartDate] = useState(new Date())
+    const [endDate, setEndDate] = useState(new Date())
+
     return (
         <div className="card-container">
             <h2>Vendas</h2>
             <div className="search">
                 <div className="search-container">
                     <DatePicker
-                        selected={new Date()}
-                        onChange={(date: Date) => { }}
+                        selected={startDate}
+                        onChange={(date: Date) => setStartDate(date)}
                         className="input-search"
                         dateFormat="dd/MM/yyyy"
                     />
                 </div>
                 <div className="search-container">
                     <DatePicker
-                        selected={new Date()}
-                        onChange={(date: Date) => { }}
+                        selected={endDate}
+                        onChange={(date: Date) => setEndDate(date)}
                         className="input-search"
                         dateFormat="dd/MM/yyyy"
                     />
