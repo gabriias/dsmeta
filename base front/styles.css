@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background-color: #000000;
+    color: #ffffff
+}
+
+a {
+    color: unset;
+}
+
+header {
+    height: 220px;
+    background: linear-gradient(180deg, #102347 0%, #181818 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-container img {
+    width: 235px;
+}
+
+.logo-container h1 {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.logo-container h3 {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+#sales {
+    padding: 40px 10px;
+}
+
+.card {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card-container {
+    background-color: #283142;
+    border-radius: 18px;
+    padding: 30px 10px;
+}
+
+.card-container h2 {
+    color: #676FFF;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    margin-bottom: 16px;
+    max-width: 300px;
+}
+
+.input-search {
+    color-scheme: dark;
+    height: 46px;
+    background-color: #1B2531;
+    border: 1px solid #384459;
+    width: 100%;
+    color: #9AAABE;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 0 20px;
+}
+
+.sales-table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.sales-table thead {
+    height: 55px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #E9E9E9;
+}
+
+.sales-table tbody {
+    font-size: 14px;
+    color: #CFCFCF;
+    text-align: center;
+}
+
+.sales-table tbody tr {
+    height: 74px;
+    border-top: 1px solid #5F6E82;
+    font-weight: 400;
+}
+
+.sales-table tbody tr:hover>td {
+    background-color: #384459;
+}
+
+.sales-table tbody tr:nth-child(odd) {
+    background-color: #242C3B;
+}
+
+.notify-button {
+    height: 45px;
+    width: 45px;
+    background: rgba(255, 107, 114, 0.1);
+    border: 1px solid #FF6B72;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.notify-button img {
+    width: 19px;
+}
+
+.show-in-tablet {
+    display: none;
+}
+
+.show-in-desktop {
+    display: none;
+}
+
+@media (min-width: 576px) {
+    .show-in-tablet {
+        display: table-cell;
+    }
+    .card-container {
+        padding: 35px;
+    }
+    .sales-table thead {
+        font-size: 18px;
+    }
+    .sales-table tbody {
+        font-size: 16px;
+    }
+    .sales-table tbody tr {
+        height: 62px;
+    }
+}
+
+@media (min-width: 992px) {
+    .show-in-desktop {
+        display: table-cell;
+    }
+}
