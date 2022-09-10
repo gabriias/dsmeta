@@ -71,3 +71,35 @@
 .sales-table tbody tr:nth-child(odd) {
     background-color: #242C3B;
 }
+
+.show-in-tablet {
+    display: none;
+}
+
+.show-in-desktop {
+    display: none;
+}
+
+@media (min-width: 576px) {
+    .show-in-tablet {
+        display: table-cell;
+    }
+    .card-container {
+        padding: 35px;
+    }
+    .sales-table thead {
+        font-size: 18px;
+    }
+    .sales-table tbody {
+        font-size: 16px;
+    }
+    .sales-table tbody tr {
+        height: 62px;
+    }
+}
+
+@media (min-width: 992px) {
+    .show-in-desktop {
+        display: table-cell;
+    }
+}
